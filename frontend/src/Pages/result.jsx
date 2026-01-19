@@ -127,7 +127,7 @@ function Ai() {
         <div className="rightBox">
           <h3 className="subtitle">Gemini AI Feedback Summary</h3>
           <div className="summary-box">
-            <p>{summaryText}</p> {/* ✅ Summary दिसेल */}
+            <p>{summaryText}</p> {/* ✅ Display summaryText */}
           </div>
         </div>
       </div>

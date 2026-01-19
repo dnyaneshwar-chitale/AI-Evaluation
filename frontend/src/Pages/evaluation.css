@@ -108,12 +108,59 @@ html, body {
   margin-bottom: 0.5rem;
   color: #0056ff;
 }
-
+@media (max-width: 600px) {
+    .evaluation-title {
+        font-size: 1.8rem;
+    }
+}
+.evaluation-title {
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.evaluation-subtitle {
+    color: #fffc;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
 /* --- Responsive tweaks --- */
 @media (max-width: 600px) {
   .title {
-    font-size: 1.8rem;
+   margin-bottom: 10px;
+    font-size: 2.2rem;
+    font-weight: 700;
   }
+
 
   .idea-input {
     min-height: 120px;
@@ -127,21 +174,46 @@ html, body {
 /* 📱 For screens up to 720px wide */
 @media (max-width: 720px) {
   .form-card {
-    width: 95%;
-    padding: 1.5rem;
-    border-radius: 15px;
+        padding: 30px 20px;
+    }
+  }
+  .form-card {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    background: #ffffff1a;
+    border-radius: 20px;
+    width: 90%;
+  
+    max-width: 700px;
+    padding: 40px 30px;
+    transition: transform .3s;
+    box-shadow: 0 4px 30px #0006;
+    
   }
 
   .idea-input {
-    min-height: 120px;
-    font-size: 0.95rem;
-    padding: 0.8rem;
-  }
-
+  
+    resize: none;
+    color: #333;
+    background: #ffffffe6;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 1rem;
+    transition: box-shadow .3s;
+    box-shadow: inset 0 2px 6px #0003;
+}
+  
+/* 
   .generate-btn {
     font-size: 1rem;
     padding: 0.8rem;
-  }
+  } */
 
   .summary-box {
     font-size: 0.9rem;
@@ -151,5 +223,40 @@ html, body {
   .startup-container {
     background-position: center top;
     background-size: cover;
+  }
+
+.generate-btn {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  padding: 12px 28px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.generate-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* 🔄 Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

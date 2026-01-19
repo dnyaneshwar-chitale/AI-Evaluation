@@ -1,3 +1,4 @@
+
 import express from "express";
 import { getGeminiSummary } from "../utils/geminiClient.js";
 
@@ -12,9 +13,10 @@ evaluateRoutes.post("/", async (req, res) => {
     }
 
     const summary = await getGeminiSummary(ideaDescription);
-    res.json({ message: "AI Summary generated successfully", summary });
+
+    res.json({ summary });
   } catch (error) {
-    console.error("❌ Evaluation API Error:", error.message);
-    res.status(500).json({ error: "Failed to generate summary" });
+    console.error("❌ Gemini Error:", error.message);
+    res.status(500).json({ error: "AI generation failed" });
   }
 });

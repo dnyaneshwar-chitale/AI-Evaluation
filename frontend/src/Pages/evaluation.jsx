@@ -33,7 +33,7 @@ const Evaluation = () => {
 
       if (response.ok) {
         const summaryText = result.summary; // ✅ store AI summary
-        console.log("✅ AI Summary:", summaryText);
+        console.log("✅  Summary:", summaryText);
 
         // 👉 Navigate to Result page with summaryText
         navigate("/result", { state: { summaryText } });
@@ -52,18 +52,27 @@ const Evaluation = () => {
   return (
     <div className="startup-container">
       <div className="form-card">
-        <h2>Your Startup Idea</h2>
+        <h2 className="evaluation-title">Startup Evaluator 🚀</h2>
+<p className="evaluation-subtitle">Share your startup vision and discover how far it can go.</p>
 
         <textarea
           className="idea-input"
-          placeholder="Describe your innovative startup idea in detail..."
+          placeholder="Describe your  startup idea here..."
           value={idea}
           onChange={(e) => setIdea(e.target.value)}
         />
 
-        <button className="generate-btn" onClick={handleSubmit} disabled={loading}>
-          {loading ? "Generating..." : "Generate AI Summary"}
-        </button>
+       <button className="generate-btn" onClick={handleSubmit} disabled={loading}>
+  {loading ? (
+    <>
+      <div className="spinner"></div>
+      Generating...
+    </>
+  ) : (
+    "Generate Summary"
+  )}
+</button>
+
       </div>
     </div>
   );

@@ -25,27 +25,27 @@ Before analysis, first verify if this startup name or concept already exists any
 
 Output in the following format with clean spacing between each point:
 
-1️⃣ Existence Check (Already Exists or Not)**  
-- Check whether a startup with this name or similar idea already exists.  
-- Mention 2-3 examples (if found) and their current status (successful, moderate, struggling).  
-- If not found, clearly say: “No existing startups found with this name or concept.”
+1️⃣ Existence Check (Already Exists or Not) 
+ Check whether a startup with this name or similar idea already exists.  
+Mention 2-3 examples (if found) and their current status (successful, moderate, struggling).  
+ If not found, clearly say: “No existing startups found with this name or concept.”
 
 2️⃣ Current Market Status 
-- Explain if this idea or industry is currently trending, growing, or declining.  
-- Mention one recent market pattern or consumer trend related to it.
+Explain if this idea or industry is currently trending, growing, or declining.  
+Mention one recent market pattern or consumer trend related to it.
 
 3️⃣ Future Potential (Next 3-5 Years) 
-- Answer clearly: YES or NO — can this idea succeed?  
-- Give one short, practical reason for your answer.
+ Answer clearly: YES or NO — can this idea succeed?  
+ Give one short, practical reason for your answer.
 
 4️⃣ Main Risks  
-- Risk 1: (simple, realistic)  
-- Risk 2: (simple, realistic)  
-- Risk 3: (simple, realistic)
+ Risk 1: (simple, realistic)  
+ Risk 2: (simple, realistic)  
+ Risk 3: (simple, realistic)
 
 5️⃣ Final Verdict 
-- Clearly say: “This startup idea is likely to work” OR “This startup idea is unlikely to work.”  
-- Add one line explaining why you reached this conclusion.
+ Clearly say: “This startup idea is likely to work” OR “This startup idea is unlikely to work.”  
+ Add one line explaining why you reached this conclusion.
 
 Startup Idea:  
 {{ideaDescription}}
@@ -71,3 +71,4 @@ Idea: ${ideaDescription}`,
     throw new Error("Gemini API request failed");
   }
 }
+

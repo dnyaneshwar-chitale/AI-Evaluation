@@ -61,7 +61,7 @@
 
 /* 📈 Placeholder Chart Box */
 .chartBox {
-  height: 400px; /* 🔹 chart ला पुरेशी जागा मिळेल */
+  height: 400px; 
   /* margin-top: 40px; */
   display: flex;
   align-items: center;
@@ -119,7 +119,7 @@ button:hover {
 }
 /* 🧠 Right Side Summary Box Scroll */
 .summary-box {
-  max-height: 400px;        /* Limit height so it doesn’t overflow */
+  max-height: 570px;        /* Limit height so it doesn’t overflow */
   overflow-y: auto;         /* Enables vertical scrolling */
   background-color: white;  /* Clean contrast background */
   padding: 12px;
@@ -129,7 +129,7 @@ button:hover {
   color: #333;
 }
 
-/* Optional: nice scrollbar */
+
 .summary-box::-webkit-scrollbar {
   width: 6px;
 }

@@ -40,24 +40,24 @@ Your goal is to determine whether this startup name or idea already exists, who 
 Follow this structure clearly:
 
 1️⃣ Existence Check (Already Exists or Not)  
-- Check if this startup name or a very similar idea already exists in the real world.  
-- If it exists, mention 2-3 existing companies or startups doing it and whether they are successful or struggling.  
-- If not found, clearly say “No existing startups found with this exact idea or name — seems original.”
+ Check if this startup name or a very similar idea already exists in the real world.  
+ If it exists, mention 2-3 existing companies or startups doing it and whether they are successful or struggling.  
+If not found, clearly say “No existing startups found with this exact idea or name — seems original.”
 
 2️⃣ Current Market Status  
-- Explain if this type of idea is popular, new, or outdated.  
-- Mention one short, recent market trend related to it.
+ Explain if this type of idea is popular, new, or outdated.  
+ Mention one short, recent market trend related to it.
 
 3️⃣ Future Potential (Next 3-5 Years) 
-- Answer YES or NO — can this idea succeed in the next few years?  
-- Give one clear and realistic reason for your answer.
+ Answer YES or NO — can this idea succeed in the next few years?  
+ Give one clear and realistic reason for your answer.
 
 4️⃣ Main Risks
-- List 3 main simple and realistic risks or challenges, with line breaks between them.
+List 3 main simple and realistic risks or challenges, with line breaks between them.
 
 5️⃣ Final Verdict 
-- Clearly say: “This startup idea is likely to work” or “This startup idea is unlikely to work.”  
-- Give one short reason for your final decision.
+Clearly say: “This startup idea is likely to work” or “This startup idea is unlikely to work.”  
+Give one short reason for your final decision.
 
 Startup Idea:  
 ${ideaDescription}
@@ -90,24 +90,24 @@ export async function getGeminiSummary(ideaDescription) {
 
     fallback += "*1️⃣ Existence Check (Already Exists or Not)*\n";
     if (textLower.includes("dream") || textLower.includes("guide")) {
-      fallback += "- YES. Similar guidance and coaching services exist in the market; many range from individual coaches to established platforms.\n\n";
+      fallback += "YES. Similar guidance and coaching services exist in the market; many range from individual coaches to established platforms.\n\n";
     } else {
-      fallback += "- No existing startups found with this exact idea or name — seems original.\n\n";
+      fallback += "No existing startups found with this exact idea or name — seems original.\n\n";
     }
 
     fallback += "2️⃣ Current Market Status\n";
-    fallback += "- This domain (personal development/coaching/goal guidance) is generally popular and evolving with tech-enabled personalization.\n\n";
+    fallback += "This domain (personal development/coaching/goal guidance) is generally popular and evolving with tech-enabled personalization.\n\n";
 
     fallback += "3️⃣ Future Potential (Next 3-5 Years)\n";
     fallback += "- YES — if the idea targets a specific niche and provides measurable outcomes for users.\n\n";
 
     fallback += "4️⃣ Main Risks**\n";
-    fallback += "- Lack of clear value proposition and differentiation.\n\n";
-    fallback += "- Market saturation and competition from established players and freelancers.\n\n";
-    fallback += "- Trust & credibility challenges (users need proof of results).\n\n";
+    fallback += " Lack of clear value proposition and differentiation.\n\n";
+    fallback += " Market saturation and competition from established players and freelancers.\n\n";
+    fallback += "Trust & credibility challenges (users need proof of results).\n\n";
 
     fallback += "5️⃣ Final Verdict\n";
-    fallback += "- This startup idea is likely to work if it defines a clear niche, validates demand, and builds credibility.\n";
+    fallback += " This startup idea is likely to work if it defines a clear niche, validates demand, and builds credibility.\n";
 
     // small delay to simulate AI response
     await new Promise((r) => setTimeout(r, 800));
